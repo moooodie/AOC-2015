@@ -74,5 +74,5 @@ let partTwo =
             r, tD, iR, remTime, p + if tD = curMaxDist then 1 else 0)
         ) newReindeers
 
-    |> Seq.maxBy (fun (_, _, _, _, p) -> p)
+    |> Array.maxBy (fun (_, _, _, _, p) -> p)
     |> (fun (_, _, _, _, p) -> p)
