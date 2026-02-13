@@ -1,7 +1,6 @@
 let input = 
     let baz = System.IO.File.ReadAllLines "input.txt" in baz[0]
 
-
 let part1 = 
     input
     |> Seq.sumBy(fun sym -> if sym = '(' then 1 else -1 )

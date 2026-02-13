@@ -1,7 +1,5 @@
 let input = System.IO.File.ReadAllLines "input.txt"
 
-open System
-
 
 let (| Toggle | TurnOff | TurnOn | ) (ins: string) = 
     let parts = ins.Split ' '
@@ -59,7 +57,6 @@ let partTwo =
 
             match inst with
             | Toggle (x1, y1, x2, y2) ->
-
                 for x in x1..x2 do
                     for y in y1..y2 do 
                         grid[y][x] <- grid[y][x] + 2UL

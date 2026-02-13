@@ -9,12 +9,12 @@ let partOne =
             |> Seq.fold (fun (escapeCount, count) letter ->
                 match escapeCount, letter with
                 | 0, '\\' -> 1, count + 1
-                | 0, l -> 0, count + 1
+                | 0, _ -> 0, count + 1
                 | 1, ('"' | '\\') -> 0, count
                 | 1, 'x' -> 2, count
-                | 1, l -> failwith "can only have x, \\ or \" after first slash"
+                | 1, _ -> failwith "can only have x, \\ or \" after first slash"
 
-                | num, l ->
+                | num, _ ->
                     if num = 3 then
                         0, count
                     else num + 1, count

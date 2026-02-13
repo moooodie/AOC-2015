@@ -75,4 +75,4 @@ let partTwo =
         ) newReindeers
 
     |> Array.maxBy (fun (_, _, _, _, p) -> p)
-    |> (fun (_, _, _, _, p) -> p)
+    |> fun (_, _, _, _, p) -> p
